@@ -62,6 +62,8 @@ end
   asplode h unless have_header h
 end
 
+RbConfig::MAKEFILE_CONFIG['CC'] = "/opt/solarisstudio12.3/bin/cc"
+
 # GCC specific flags
 if RbConfig::MAKEFILE_CONFIG['CC'] =~ /gcc/
   $CFLAGS << ' -Wall -funroll-loops'
